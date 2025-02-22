@@ -22,17 +22,18 @@ li {
     width: 100vw;
     height: 100vh;
     display: grid;
-    grid-template: 1fr 4fr / 1fr 4fr;
+    grid-template: 1fr 5fr / 1fr 4fr;
     grid-template-areas: 
     "sidebar header"
     "sidebar main";
 }
 
 /* Side Navigation Menu */
+
 #sidebar {
     background-color: #D81159;
     color: white;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     font-weight: bold;
     grid-area: sidebar;
     display: grid;
@@ -52,11 +53,13 @@ li {
 
 #logo h1 {
     font-size: 2rem;
+    align-self: center;
 }
 
 #logo img {
     width: 50px;
     height: 50px;
+    justify-self: center;
 }
 
 #main-nav {
@@ -64,7 +67,7 @@ li {
     grid-row: 2 / 3;
     display: grid;
     grid-template-columns: subgrid;
-    row-gap: 1.3rem;
+    row-gap: 1.5rem;
 }
 
 #main-nav li, #admin-nav li {
@@ -73,17 +76,27 @@ li {
     grid-template-columns: subgrid;
 }
 
+#main-nav li:hover, #admin-nav li:hover {
+    background-color: #eb6898;
+    cursor: pointer;
+}
+
 #admin-nav {
     grid-column: 1 / 3;
     grid-row: 3 / 4;
     display: grid;
     grid-template-columns: subgrid;
-    row-gap: 1.3rem;
+    row-gap: 1.5rem;
 }
 
 .sidebar-icon {
-    width: 1.3rem;
-    height: 1.3rem;
+    width: 1.7rem;
+    height: 1.7rem;
+    justify-self: center;
+}
+
+.white-fill {
+    filter: invert(1);
 }
 
 /* Header */
